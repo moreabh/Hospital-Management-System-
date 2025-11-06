@@ -4,9 +4,10 @@ import java.sql.*;
 import java.util.Scanner;
 
 public class HospitalManagementSystem {
-    private static final String url = "jdbc:mysql://localhost:3306/hospital";
+   
+    private static final String URL = "jdbc:mysql://localhost:3306/hospital?useSSL=false&allowPublicKeyRetrieval=true&serverTimezone=UTC";
     private static final String username = "root";
-    private static final String password = "Admin@123";
+    private static final String password = "@Bhi1834";
 
     public static void main(String[] args) {
         try{

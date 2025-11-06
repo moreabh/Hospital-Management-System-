@@ -44,16 +44,16 @@ public class Patient {
             PreparedStatement preparedStatement = connection.prepareStatement(query);
             ResultSet resultSet = preparedStatement.executeQuery();
             System.out.println("Patients: ");
-            System.out.println("+------------+--------------------+----------+------------+");
+            System.out.println(" ------------+--------------------+----------+------------");
             System.out.println("| Patient Id | Name               | Age      | Gender     |");
-            System.out.println("+------------+--------------------+----------+------------+");
+            System.out.println("-------------+--------------------+----------+------------");
             while(resultSet.next()){
                 int id = resultSet.getInt("id");
                 String name = resultSet.getString("name");
                 int age = resultSet.getInt("age");
                 String gender = resultSet.getString("gender");
                 System.out.printf("| %-10s | %-18s | %-8s | %-10s |\n", id, name, age, gender);
-                System.out.println("+------------+--------------------+----------+------------+");
+                System.out.println("------------+--------------------+----------+------------");
             }
 
         }catch (SQLException e){
